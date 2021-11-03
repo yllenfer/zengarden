@@ -1,0 +1,85 @@
+$big-screen: 50em;
+
+h3{
+  margin: 3%;
+}
+
+header{
+h1{
+  text-align: center;
+  padding: 5%;
+}
+  
+  h2{
+    text-align: 20%;
+    padding: 5%;
+  }
+
+}
+
+p {
+    margin: 5%;
+}
+
+footer{
+  a {
+     padding: 3%;
+    text-decoration: none;
+    margin-left: 3%;
+   
+  }
+}
+
+div{
+ .preamble, .benefits, .participation, .explanation{
+    margin-left: 8%;
+    margin-right: 8%;
+   padding: 5%;
+  }
+  
+  
+  .design-selection{
+     padding-top: 3em;
+  
+    
+  }
+  h3{
+    text-align: center;
+  }
+  
+ 
+}
+
+ 
+
+aside {
+  a{
+  text-decoration: none;
+  text-align: center;
+  
+    
+  
+}
+  
+  h3{
+    text-align: left;
+  }
+  
+}
+
+@media (min-width: $big-screen) {
+   @mixin grid-container() {
+     display: grid;
+     right: 0;
+     
+     h1{
+      padding: 10%;
+       background-color: blue;
+     }
+     
+     }
+     
+     body > div {
+        @include grid-container;        
+    }  
+}

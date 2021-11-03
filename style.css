@@ -1,0 +1,59 @@
+h3 {
+  margin: 3%;
+}
+
+header h1 {
+  text-align: center;
+  padding: 5%;
+}
+
+header h2 {
+  text-align: 20%;
+  padding: 5%;
+}
+
+p {
+  margin: 5%;
+}
+
+footer a {
+  padding: 3%;
+  text-decoration: none;
+  margin-left: 3%;
+}
+
+div .preamble, div .benefits, div .participation, div .explanation {
+  margin-left: 8%;
+  margin-right: 8%;
+  padding: 5%;
+}
+
+div .design-selection {
+  padding-top: 3em;
+}
+
+div h3 {
+  text-align: center;
+}
+
+aside a {
+  text-decoration: none;
+  text-align: center;
+}
+
+aside h3 {
+  text-align: left;
+}
+
+@media (min-width: 50em) {
+  body > div {
+    display: -ms-grid;
+    display: grid;
+    right: 0;
+  }
+  body > div h1 {
+    padding: 10%;
+    background-color: blue;
+  }
+}
+/*# sourceMappingURL=style.css.map */
