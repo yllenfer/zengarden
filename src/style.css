@@ -1,5 +1,26 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+}
+
 h3 {
   margin: 3%;
+  text-align: center;
 }
 
 header h1 {
@@ -13,47 +34,312 @@ header h2 {
 }
 
 p {
-  margin: 5%;
+  margin-left: 5%;
+  line-height: 1.5em;
+}
+
+footer {
+  margin: auto;
+  padding: 2em;
 }
 
 footer a {
-  padding: 3%;
+  padding: 4%;
   text-decoration: none;
   margin-left: 3%;
 }
 
-div .preamble, div .benefits, div .participation, div .explanation {
-  margin-left: 8%;
-  margin-right: 8%;
-  padding: 5%;
+.wrapper {
+  padding: 2em;
 }
 
-div .design-selection {
-  padding-top: 3em;
-}
-
-div h3 {
-  text-align: center;
-}
-
-aside a {
-  text-decoration: none;
-  text-align: center;
-}
-
-aside h3 {
+.wrapper h3 {
   text-align: left;
 }
 
+.participation {
+  /* Add shadows to create the "card" effect */
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.participation p {
+  margin: 0;
+  padding: 4%;
+  text-align: justify;
+}
+
+.benefits {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.benefits p {
+  margin: 0;
+  padding: 4%;
+  text-align: justify;
+}
+
+.explanation {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.explanation p {
+  margin: 0;
+  padding: 4%;
+  text-align: justify;
+}
+
 @media (min-width: 50em) {
-  body > div {
+  .page-wrapper {
+    position: absolute;
     display: -ms-grid;
     display: grid;
-    right: 0;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
-  body > div h1 {
-    padding: 10%;
-    background-color: blue;
+  .page-wrapper .intro {
+    grid-column: span 2;
+  }
+  .page-wrapper .intro .banner h1 {
+    padding: 15%;
+  }
+  .page-wrapper .summary {
+    margin-top: -2em;
+  }
+  .page-wrapper .summary p {
+    margin-left: 10%;
+    font-size: 1.2em;
+  }
+  .page-wrapper .preamble {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 0;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .page-wrapper .preamble p {
+    font-size: 1.2em;
+  }
+  .supporting {
+    grid-column: span 2;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .supporting .explanation {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .supporting .participation {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .supporting .benefits {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .supporting .requirements {
+    position: relative;
+    margin-top: 30em;
+    margin: 3%;
+    grid-column: span 3;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .supporting .requirements h3 {
+    text-align: left;
+    margin-left: 5%;
+    font-size: 1.5em;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .supporting .requirements :nth-child(2) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .supporting .requirements :nth-child(3) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  .supporting .requirements :nth-child(4) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .supporting .requirements :nth-child(5) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  .supporting .requirements :nth-child(6) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+    text-align: right;
+    margin-left: 25%;
+    margin-top: 10%;
+  }
+  .supporting footer {
+    padding: 0;
+    margin: 0;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6/7;
+    grid-column: span 2;
+    grid-column: span 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: space-between;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .supporting footer a {
+    padding-left: 6%;
+    padding-right: 6%;
+    font-size: 1.5em;
+    text-decoration: none;
+    margin-left: 0;
+  }
+  aside {
+    grid-column: span 2;
+    margin-top: 2em;
+    padding-bottom: 2em;
+  }
+  aside .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    justify-items: center;
+  }
+  .explanation,
+  .participation,
+  .benefits {
+    width: 90%;
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    background-color: antiquewhite;
+    margin-left: 5%;
+  }
+  .main .explanation:hover {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+  }
+  .main .participation:hover {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+  }
+  .main .benefits:hover {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+  }
+  .explanation h3,
+  .participation h3,
+  .benefits h3 {
+    position: absolute;
+    height: 95%;
+    width: 100%;
+    background: white;
+    line-height: 200px;
+    color: #03446A;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 5px;
+  }
+  .explanation > p,
+  .participation > p {
+    position: relative;
+    width: 100%;
+    padding: 2em;
+    background: white;
+    color: black;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  .benefits > p {
+    position: relative;
+    width: 100%;
+    padding: 2em;
+    background: white;
+    color: black;
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
   }
 }
 /*# sourceMappingURL=style.css.map */
