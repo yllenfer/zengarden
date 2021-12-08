@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Orbitron&display=swap");
 *,
 *:before,
 *:after {
@@ -5,6 +6,19 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: #01012b;
+}
+
+.summary a {
+  color: #05d9e8;
+  text-decoration: none;
+}
+
+.summary a:hover {
+  color: #ff2a6d;
 }
 
 .page-wrapper {
@@ -21,21 +35,29 @@
 h3 {
   margin: 3%;
   text-align: center;
+  font-family: "Orbitron", Arial, Helvetica, sans-serif, serif;
+  color: #d1f7ff;
 }
 
 header h1 {
   text-align: center;
   padding: 5%;
+  color: #ff2a6d;
+  font-family: "Orbitron", Arial, Helvetica, sans-serif, serif;
 }
 
 header h2 {
   text-align: 20%;
   padding: 5%;
+  font-family: "Orbitron", Arial, Helvetica, sans-serif, serif;
+  color: white;
 }
 
 p {
   margin-left: 5%;
   line-height: 1.5em;
+  font-family: "Montserrat", sans-serif;
+  color: white;
 }
 
 footer {
@@ -47,6 +69,23 @@ footer a {
   padding: 4%;
   text-decoration: none;
   margin-left: 3%;
+}
+
+footer a:hover {
+  color: #05d9e8;
+  -webkit-box-shadow: 2px 2px 8px #05d9e8;
+          box-shadow: 2px 2px 8px #05d9e8;
+  text-shadow: 0 0 8px #05d9e8;
+}
+
+.zen-resources, .design-archives {
+  list-style-type: none;
+}
+
+.zen-resources a, .design-archives a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: #05d9e8;
 }
 
 .wrapper {
@@ -95,6 +134,84 @@ footer a {
   margin: 0;
   padding: 4%;
   text-align: justify;
+}
+
+.requirements {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+.requirements a {
+  text-decoration: none;
+  color: #05d9e8;
+}
+
+.requirements a:hover {
+  color: #ff2a6d;
+}
+
+.design-selection {
+  color: #005678;
+}
+
+.design-selection li {
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.design-selection a {
+  text-decoration: none;
+  color: #05d9e8;
+}
+
+.design-selection a:hover {
+  color: #ff2a6d;
+}
+
+h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 20px auto;
+  letter-spacing: .2em;
+  -webkit-animation: typing 5.5s steps(40, end), blink-caret 1s step-end 5s;
+          animation: typing 5.5s steps(40, end), blink-caret 1s step-end 5s;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  30% {
+    border-color: #05d9e8;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  30% {
+    border-color: #05d9e8;
+  }
 }
 
 @media (min-width: 50em) {
@@ -255,6 +372,7 @@ footer a {
     font-size: 1.5em;
     text-decoration: none;
     margin-left: 0;
+    color: #05d9e8;
   }
   aside {
     grid-column: span 2;
@@ -282,7 +400,7 @@ footer a {
     transition: transform 1s, -webkit-transform 1s;
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
-    background-color: antiquewhite;
+    background-color: #05d9e8;
     margin-left: 5%;
   }
   .main .explanation:hover {
